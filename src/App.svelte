@@ -22,6 +22,7 @@
 			.then(response => {
 				// baby.classList.toggle('hidden');
 				// span.classList.toggle('hidden');
+				span.classList.add('hidden');
 				return response.json()
 			})
 			.then(response => {
@@ -36,7 +37,8 @@
 				console.log(attri);
 			})
 			.catch(err => {
-				span.classList.toggle('hidden');
+				console.log(err);
+				span.classList.remove('hidden');
 			})
 			;
 	}
