@@ -34,7 +34,11 @@
 				// baby.classList.toggle('hidden');
 				// span.classList.toggle('hidden');
 				console.log(attri);
-			});
+			})
+			.catch(err => {
+				span.classList.toggle('hidden');
+			})
+			;
 	}
 
 	const imageError = (event) => {
@@ -50,7 +54,7 @@
 		<input type="text" name="monkey-id" class="border border-black rounded-md pl-1" bind:value={id}>
 		<button class="border-solid border border-black px-1 rounded-md" type="button" on:click={newId}>Click Here</button>
 	</div>
-	<span class="mx-auto">If the monkey is not changing, we apologize, OpenSea's servers are down.</span>
+	<span bind:this={span} class="hidden mx-auto">If the monkey is not changing, we apologize, OpenSea's servers are down.</span>
 	<!-- <span class="hidden">Asking the cranes to bring your baby...</span> -->
 	<div class="relative mx-auto w-64">
 		<img class="absolute top-0 w-64" src="Baby Monkey Colors/{attri.background}.png" alt="background" >
