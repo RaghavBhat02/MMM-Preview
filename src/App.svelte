@@ -65,8 +65,9 @@
 		<img class="absolute top-0 w-64" src="Baby Monkey Necklace/{attri.neck}.png" alt="neck" on:error={imageError} on:load={imageLoad}>
 		<img class="absolute top-0 w-64" src="Baby Monkey HatHair/{attri.head}.png" alt="head/hair" on:error={imageError} on:load={imageLoad}>
 		<img class="absolute top-0 w-64" src="Baby Monkey Ears/{attri.earrings}.png" alt="ears" on:error={imageError} on:load={imageLoad}>
-		<img class="absolute top-0 w-64" src="Baby Monkey Mouths/{attri.mouth}.png" alt="mouth">
 		<img class="absolute top-0 w-64" src="Baby Monkey Eyes/{attri.eyes}.png" alt="eyes">
+		<img class="absolute top-0 w-64" src="Baby Monkey Mouths/{attri.mouth}.png" alt="mouth">
+		
 	</div>
 </main>
 
