@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	let id = 4;
+	let id;
 	let baby;
 	let span;
 	onMount( () => {
@@ -50,6 +50,7 @@
 		<input type="text" name="monkey-id" class="border border-black rounded-md pl-1" bind:value={id}>
 		<button class="border-solid border border-black px-1 rounded-md" type="button" on:click={newId}>Click Here</button>
 	</div>
+	<!--<span class="mx-auto">The numbers 1,2,3 belong to godfathers so they won't do anything. 5001 and beyond does not exist, so it won't do anything either.</span>-->
 	<!-- <span class="hidden">Asking the cranes to bring your baby...</span> -->
 	<div class="relative mx-auto w-64">
 		<img class="absolute top-0 w-64" src="Baby Monkey Colors/{attri.background}.png" alt="background" >
