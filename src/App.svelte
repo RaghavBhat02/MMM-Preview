@@ -15,7 +15,9 @@
 		mouth: 'Base',
 		eyes:'Original'
 	};
-	const newId = () => {
+	const newId = (event) => {
+		if(event.key && event.key !== 'Enter') return;
+
 		fetch(`https://api.opensea.io/api/v1/asset/0x7c07AAfA429D952Ac3Fde9Ca037003EDB57cE14e/${id}`)
 			.then(response => {
 				// baby.classList.toggle('hidden');
@@ -41,7 +43,7 @@
 	const imageLoad = event => event.target.classList.remove('hidden');
 </script>
 
-<main class="p-5">
+<main class="p-5" on:keyup={newId}>
 	<!--preview-->
 	<div class="mx-auto max-w-md mb-4">
 		<span class="text-blue-500">Your Monkey Id</span>
